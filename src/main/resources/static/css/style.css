@@ -1,0 +1,21 @@
+.error-menssage {
+    color: #dc3545;
+}
+
+.sucess-menssage {
+    color: #198754;
+}
+
+table, th, tr, th, td {
+    border: 1px solid;
+    border-collapse: collapse;
+
+}
+
+th, tr, th, td {
+padding: 5px;
+}
+
+.caixa-geral {
+    width: 90%;
+}
