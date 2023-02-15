@@ -37,7 +37,6 @@ public class ProdutoController {
     @GetMapping("/new")
     public ModelAndView nnew(FormProdutoDto formProdutoDto) {
         ModelAndView mv = new ModelAndView("produtos/new");
-//        mv.addObject("listaStatusProfessor", StatusProfessor.values());
 
         return mv;
     }
@@ -51,8 +50,6 @@ public class ProdutoController {
 
             ModelAndView mv = new ModelAndView("produtos/new");
 
-            // atributo que é carregado novamente ao entrar na clase de erros
-//            mv.addObject("listaStatusProfessor", StatusProfessor.values());
             return mv;
         }
         else {
@@ -84,7 +81,7 @@ public class ProdutoController {
        }
     }
 
-    // OBS: aqui o correto é PUT
+    // OBS: aqui o correto é PUT mas o html não permite
     @GetMapping("/{id}/edit")
     public ModelAndView edit(@PathVariable Long id, FormProdutoDto formProdutoDto) {
         Optional<Produto> optionalProduto = this.produtoRepository.findById(id);
