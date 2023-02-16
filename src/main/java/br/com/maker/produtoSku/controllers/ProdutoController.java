@@ -41,6 +41,7 @@ public class ProdutoController {
         return mv;
     }
 
+    // recebe a view e caso não tenha erros de validação passa para a próxima ação
     @PostMapping("")
     public ModelAndView create(@Valid FormProdutoDto formProdutoDto, BindingResult bindingResult) {
 
@@ -48,6 +49,7 @@ public class ProdutoController {
         if (bindingResult.hasErrors()) {
             System.out.println("\n******************** TEM ERROS *****************\n");
 
+//          caso tenha erros de validação retorna a view com os valores preenchidos
             ModelAndView mv = new ModelAndView("produtos/new");
 
             return mv;
