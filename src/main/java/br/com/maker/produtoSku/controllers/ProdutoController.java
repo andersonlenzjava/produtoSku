@@ -77,7 +77,7 @@ public class ProdutoController {
            return mv;
        }
        else {
-            System.out.println("$$$$$$$$$$$ NÃO FOI ENCONTRADO O PRODUTO DE ID " + id + " $$$$$$$$$$");
+            System.out.println("********* NÃO FOI ENCONTRADO O PRODUTO DE ID " + id + " *********");
            //poderia fazer uma mensagem de erro, mas redireciona para a listagem
            return new ModelAndView("redirect:/produtos");
        }
@@ -98,7 +98,7 @@ public class ProdutoController {
             return mv;
         }
             else {
-            System.out.println("$$$$$$$$$$$ NÃO FOI ENCONTRADO O PRODUTO DE ID " + id + " $$$$$$$$$$");
+            System.out.println("********* NÃO FOI ENCONTRADO O PRODUTO DE ID " + id + " *********");
             //poderia fazer uma mensagem de erro, mas redireciona para a listagem
             return new ModelAndView("redirect:/produtos");
         }
