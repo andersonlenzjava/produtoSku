@@ -12,60 +12,58 @@
     <h1>Novo Produto</h1>
   </div>
 
-  <div>
-    <div>
-      <form th:object="${formProdutoDto}" action="/produtos" method="POST">
-        <div>
-          <label>Descrição do produto</label>
-          <input type="text" th:field="*{descricao}">
-          <div th:errors="*{descricao}"> </div>
-        </div>
-        <div>
-          <label>Marca</label>
-<!--          elemento do thymeleaf para adicionar uma classe de estilo no erro  th:errorclass="" -->
-          <input type="text" th:field="*{marca}">
-          <div th:errors="*{marca}"> </div>
-        </div>
-        <div>
-          <label>Departamento</label>
-          <input type="text" th:field="*{departamento}">
-          <div th:errors="*{departamento}"> </div>
-        </div>
-        <div>
-          <label>Nome do Produto</label>
-          <input type="text" th:field="*{nome}">
-          <div th:errors="*{nome}"> </div>
-        </div>
-        <div>
-          <label>Modelo</label>
-          <input type="text" th:field="*{modelo}">
-          <div th:errors="*{modelo}"> </div>
-        </div>
-        <div>
-          <label>Tamanho</label>
-          <input type="text" th:field="*{tamanho}">
-          <div th:errors="*{tamanho}"> </div>
-        </div>
-        <div>
-          <label>URL da imagem do Produto</label>
-          <input type="text" th:field="*{urlImagem}">
-          <div th:errors="*{urlImagem}"> </div>
-        </div>
-        <div>
-          <label>Código de barras</label>
-          <input type="text" th:field="*{codigoBarras}">
-          <div th:errors="*{codigoBarras}"> </div>
-        </div>
-        <div>
-          <label>Data de Lançamento</label>
-          <input type="text" th:field="*{dataLancamento}">
-          <div th:errors="*{dataLancamento}"> </div>
-        </div>
-
+  <div class="formulario-cadastro">
+    <form th:object="${formProdutoDto}" action="/produtos" method="POST">
+      <div class="celula-cadastro">
+        <label for="descricao">Descrição do produto</label>
+        <input type="text" id="descricao" th:field="*{descricao}" >
+        <div class="celula-cadastro-erro" th:errors="*{descricao}"> </div>
+      </div>
+      <div  class="celula-cadastro">
+        <label for="marca">Marca</label>
+        <input type="text" id="marca" th:field="*{marca}">
+        <div class="celula-cadastro-erro" th:errors="*{marca}"> </div>
+      </div>
+      <div class="celula-cadastro">
+        <label for="departamento">Departamento</label>
+        <input type="text" id="departamento" th:field="*{departamento}">
+        <div th:errors="*{departamento}"> </div>
+      </div>
+      <div class="celula-cadastro">
+        <label for="nome_produto">Nome do Produto</label>
+        <input type="text" id="nome_produto" th:field="*{nome}">
+        <div th:errors="*{nome}"> </div>
+      </div>
+      <div class="celula-cadastro">
+        <label for="modelo">Modelo</label>
+        <input type="text" id="modelo" th:field="*{modelo}">
+        <div th:errors="*{modelo}"> </div>
+      </div>
+      <div class="celula-cadastro">
+        <label for="tamanho">Tamanho</label>
+        <input type="text" id="tamanho" th:field="*{tamanho}">
+        <div th:errors="*{tamanho}"> </div>
+      </div>
+      <div class="celula-cadastro">
+        <label for="url">URL da imagem do Produto</label>
+        <input type="text" id="url" th:field="*{urlImagem}">
+        <div th:errors="*{urlImagem}"> </div>
+      </div>
+      <div class="celula-cadastro">
+        <label for="codigo_barras">Código de barras</label>
+        <input type="text" id="codigo_barras" th:field="*{codigoBarras}">
+        <div th:errors="*{codigoBarras}"> </div>
+      </div>
+      <div class="celula-cadastro">
+        <label for="data_lancamento">Data de Lançamento</label>
+        <input type="text" id="data_lancamento" th:field="*{dataLancamento}">
+        <div th:errors="*{dataLancamento}"> </div>
+      </div>
+      <div class="submit-space">
         <button type="submit">Submeter</button>
         <a href="javascript:history.back()">Voltar</a>
-      </form>
-    </div>
+      </div>
+    </form>
   </div>
 </div>
 
