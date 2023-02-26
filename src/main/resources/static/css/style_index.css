@@ -1,0 +1,48 @@
+/* MAIN  */
+
+.caixa-geral {
+    margin: 0 auto;
+        width: 70%;
+    max-width: 1200px;
+}
+
+.caixa-geral__titulo {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: blue;
+    font-weight: 700;
+    font-size: 2rem;
+}
+ 
+
+.botao-novo__produto {
+    height: 2rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border: 1px solid black;
+    border-radius: 2px;
+    padding: 0.2rem;
+    margin-top: 1rem;
+}
+
+.botao-novo__produto__texto {
+    padding: 0.5rem;
+}
+
+table, th, tr, th, td {
+    border: 1px solid;
+    border-collapse: collapse;
+}
+
+th, tr, th, td {
+padding: 5px;
+}
+
+.limite-width {
+    max-width: 120px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+

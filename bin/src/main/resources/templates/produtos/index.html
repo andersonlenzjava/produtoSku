@@ -2,15 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="/css/_reset.css">
-    <link rel="stylesheet" href="/css/style_index.css">
+    <link rel="stylesheet" href="/css/style.css">
     <title>Lista de Produtos</title>
 </head>
 
 <body class="caixa-geral">
-    <div class="caixa-geral__titulo">
+    <div>
         <h1>Lista de Produtos</h1>
-<!--        <span class="sucess-menssage">mensagem de aviso!</span>-->
+        <span class="sucess-menssage">mensagem de aviso!</span>
     </div>
     <div class="caixa-tabela">
         <table>
@@ -51,10 +50,7 @@
         </table>
     </div>
     <div>
-        <button class="botao-novo__produto" >
-            <a class="botao-novo__produto__texto" href="/produtos/new">Novo Produto</a>
-        </button>
-
+        <a href="/produtos/new">Novo Produto</a>
     </div>
 
 </body>

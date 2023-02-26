@@ -2,67 +2,70 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="/css/style.css">
-    <title>Editar Produto</title>
+    <link rel="stylesheet" href="/css/_reset.css">
+    <link rel="stylesheet" href="/css/style_edit_new.css">
+    <link rel="stylesheet" href="/css/style_index.css">
+    <title>Editar Produto - teste</title>
 </head>
 
-<body>
+<body  class="corpo-form">
 <div>
-  <div>
-<!--    passado no model and view -->
+  <div class="caixa-geral__titulo">
     <h1>Editar Produto #: <span th:text="${produtoId}"></span></h1>
   </div>
 
   <div>
-    <div>
+    <div class="formulario-cadastro">
       <form th:object="${formProdutoDto}" th:action="@{/produtos/{produtoId}(produtoId = ${produtoId})}" method="POST">
-        <div>
-          <label>Descrição do produto</label>
-          <input type="text" th:field="*{descricao}">
-          <div th:errors="*{descricao}"> </div>
+        <div class="celula-cadastro">
+          <label class="celula-cadastro__label" for="descricao">Descrição do produto</label>
+          <input class="celula-cadastro__input" type="text" id="descricao" th:field="*{descricao}" />
+          <span th:errorclass="error" th:errors="*{descricao}"></span>
         </div>
-        <div>
-          <label>Marca</label>
-          <input type="text" th:field="*{marca}">
-          <div th:errors="*{marca}"> </div>
+        <div  class="celula-cadastro">
+          <label class="celula-cadastro__label" for="marca">Marca</label>
+          <input class="celula-cadastro__input" type="text" id="marca" th:field="*{marca}">
+          <span th:errorclass="error" th:errors="*{marca}"></span>
         </div>
-        <div>
-          <label>Departamento</label>
-          <input type="text" th:field="*{departamento}">
-          <div th:errors="*{departamento}"> </div>
+        <div class="celula-cadastro">
+          <label class="celula-cadastro__label" for="departamento">Departamento</label>
+          <input class="celula-cadastro__input" type="text" id="departamento" th:field="*{departamento}">
+          <span th:errorclass="error" th:errors="*{departamento}"></span>
         </div>
-        <div>
-          <label>Nome do Produto</label>
-          <input type="text" th:field="*{nome}">
-          <div th:errors="*{nome}"> </div>
+        <div class="celula-cadastro">
+          <label class="celula-cadastro__label" for="nome_produto">Nome do Produto</label>
+          <input class="celula-cadastro__input" type="text" id="nome_produto" th:field="*{nome}">
+          <span th:errorclass="error" th:errors="*{nome}"></span>
         </div>
-        <div>
-          <label>Modelo</label>
-          <input type="text" th:field="*{modelo}">
-          <div th:errors="*{modelo}"> </div>
+        <div class="celula-cadastro">
+          <label class="celula-cadastro__label" for="modelo">Modelo</label>
+          <input class="celula-cadastro__input" type="text" id="modelo" th:field="*{modelo}">
+          <span th:errorclass="error" th:errors="*{modelo}"></span>
         </div>
-        <div>
-          <label>Tamanho</label>
-          <input type="text" th:field="*{tamanho}">
-          <div th:errors="*{tamanho}"> </div>
+        <div class="celula-cadastro">
+          <label class="celula-cadastro__label" for="tamanho">Tamanho</label>
+          <input class="celula-cadastro__input" type="text" id="tamanho" th:field="*{tamanho}">
+          <span th:errorclass="error" th:errors="*{tamanho}"></span>
         </div>
-        <div>
-          <label>URL da imagem do Produto</label>
-          <input type="text" th:field="*{urlImagem}">
-          <div th:errors="*{urlImagem}"> </div>
+        <div class="celula-cadastro">
+          <label class="celula-cadastro__label" for="url">URL da imagem do Produto</label>
+          <input class="celula-cadastro__input" type="text" id="url" th:field="*{urlImagem}">
+          <span th:errorclass="error" th:errors="*{urlImagem}"></span>
         </div>
-        <div>
-          <label>Código de barras</label>
-          <input type="text" th:field="*{codigoBarras}">
-          <div th:errors="*{codigoBarras}"> </div>
+        <div class="celula-cadastro">
+          <label class="celula-cadastro__label" for="codigo_barras">Código de barras</label>
+          <input class="celula-cadastro__input" type="text" id="codigo_barras" th:field="*{codigoBarras}">
+          <span th:errorclass="error" th:errors="*{codigoBarras}"></span>
         </div>
-        <div>
-          <label>Data de Lançamento</label>
-          <input type="text" th:field="*{dataLancamento}">
-          <div th:errors="*{dataLancamento}"> </div>
+        <div class="celula-cadastro">
+          <label class="celula-cadastro__label" for="data_lancamento">Data de Lançamento</label>
+          <input class="celula-cadastro__input" type="text" id="data_lancamento" th:field="*{dataLancamento}">
+          <span th:errorclass="error" th:errors="*{dataLancamento}"></span>
         </div>
-        <button type="submit">Submeter</button>
-        <a href="javascript:history.back()">Voltar</a>
+        <div class="submit-space">
+          <button type="submit">Submeter</button>
+          <a href="javascript:history.back()">Voltar</a>
+        </div>
       </form>
     </div>
   </div>

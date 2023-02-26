@@ -1,3 +1,4 @@
+
 .error-menssage {
     color: #dc3545;
 }
@@ -6,47 +7,17 @@
     color: #198754;
 }
 
-table, th, tr, th, td {
-    border: 1px solid;
-    border-collapse: collapse;
 
-}
 
-th, tr, th, td {
-padding: 5px;
-}
 
-.caixa-geral {
-    max-width: 1200px;
-}
 
-.limite-width {
-    max-width: 120px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
 
-.celula-cadastro {
-    margin-top: 1rem;
-    max-width: 20%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
 
-.submit-space {
-    margin-top: 1rem;
-    max-width: 20%;
-    display: flex;
-    justify-content: space-between;
-}
 
-.formulario-cadastro {
-    height: 80vh;
 
-}
 
-.celula-cadastro-erro {
-    color: red;
-}
+
+
+
+
+

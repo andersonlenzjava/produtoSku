@@ -1,0 +1,38 @@
+.corpo-form {
+    margin: 0 auto;
+    width: 50%;
+    margin-top: 5rem;
+}
+
+.formulario-cadastro {
+    height: 90vh;
+}
+
+.celula-cadastro {
+    height: 10%;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.celula-cadastro__label {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+.celula-cadastro__input {
+    border: 1px solid black;
+    height: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.error {
+    color: red;
+}
+
+.submit-space {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
