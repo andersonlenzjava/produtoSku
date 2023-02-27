@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/css/_reset.css">
     <link rel="stylesheet" href="/css/style_show.css">
+    <link rel="stylesheet" href="/css/style.css">
     <title>Detalhes do produto</title>
 </head>
 <body class="corpo-show">
-    <h1>Detalhes do Produto</h1>
-    <h2>Produto #<span th:text="${produto.id}"></span></h2>
+    <h1 class="caixa-geral__titulo">Detalhes do Produto # <span th:text="${produto.id}"></span></h1>
     <main>
         <div>
             <div class="corpo-show__itens">
@@ -26,8 +26,8 @@
             <div>
                 <div class="corpo-show__menu">
 <!--                    monta a url do botão editar na view show -->
-                    <a th:href="@{/produtos/{produtoId}/edit(produtoId = ${produto.id})}">Editar</a>
-                    <a href="/produtos">Voltar</a>
+                    <a class="button__geral" th:href="@{/produtos/{produtoId}/edit(produtoId = ${produto.id})}">Editar</a>
+                    <a class="button__geral" href="/produtos">Voltar</a>
                 </div>
             </div>
         </div>

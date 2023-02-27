@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="/css/_reset.css">
     <link rel="stylesheet" href="/css/style_edit_new.css">
     <link rel="stylesheet" href="/css/style_index.css">
+    <link rel="stylesheet" href="/css/style.css">
     <title>Editar Produto - teste</title>
 </head>
 
@@ -63,8 +64,8 @@
           <span th:errorclass="error" th:errors="*{dataLancamento}"></span>
         </div>
         <div class="submit-space">
-          <button type="submit">Submeter</button>
-          <a href="javascript:history.back()">Voltar</a>
+          <button class="button__geral" type="submit">Submeter</button>
+          <a class="button__geral" href="javascript:history.back()">Voltar</a>
         </div>
       </form>
     </div>

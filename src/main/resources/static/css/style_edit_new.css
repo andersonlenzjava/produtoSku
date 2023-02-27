@@ -25,6 +25,12 @@
     border: 1px solid black;
     height: 1.5rem;
     font-size: 1.2rem;
+    border-radius: 3px;
+}
+
+.celula-cadastro__input:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
 }
 
 .error {

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/css/_reset.css">
     <link rel="stylesheet" href="/css/style_index.css">
+    <link rel="stylesheet" href="/css/style.css">
     <title>Lista de Produtos</title>
 </head>
 
@@ -26,9 +27,9 @@
                 <th class="limite-width">Url da Imagem</th>
                 <th>Codigo de Barras</th>
                 <th>Data Lançamento</th>
-                <th></th>
-                <th></th>
-                <th></th>
+                <th class="borda-area-botoes"></th>
+                <th class="borda-area-botoes"></th>
+                <th class="borda-area-botoes"></th>
             </tr>
             </thead>
             <tbody>
@@ -38,21 +39,36 @@
                     <td th:text="${produto.marca}">Marca</td>
                     <td th:text="${produto.departamento}">Departamento</td>
                     <td th:text="${produto.nome}">Nome</td>
-                    <td class="limite-width" th:text="${produto.modelo}">Modelo</td>
+                    <td th:text="${produto.modelo}">Modelo</td>
                     <td th:text="${produto.tamanho}">Tamanho</td>
                     <td class="limite-width" th:text="${produto.urlImagem}">UrlImagem</td>
-                    <td th:text="${produto.codigoBarras}">Codigo de Barras</td>
+                    <td class="limite-width" th:text="${produto.codigoBarras}">Codigo de Barras</td>
                     <td th:text="${produto.dataLancamento}">Data Lançamento</td>
-                    <td><a th:href="@{/produtos/{produtoId}(produtoId = ${produto.id})}">Detalhes</a></td>
-                    <td><a th:href="@{/produtos/{produtoId}/edit(produtoId = ${produto.id})}">Editar</a></td>
-                    <td><a th:href="@{/produtos/{produtoId}/delete(produtoId = ${produto.id})}">Deletar</a></td>
+                    <td class="borda-area-botoes">
+                        <div class="conjunto-texto_botao">
+                            <img src="/svg/lupa.svg" alt="" class="tabela__logo">
+                            <a class="botao__lista-produtos" th:href="@{/produtos/{produtoId}(produtoId = ${produto.id})}">Detalhes</a>
+                        </div>     
+                    </td>
+                    <td class="borda-area-botoes">
+                        <div class="conjunto-texto_botao">
+                            <img src="/svg/lapis.svg" alt="" class="tabela__logo">
+                            <a class="botao__lista-produtos" th:href="@{/produtos/{produtoId}/edit(produtoId = ${produto.id})}">Editar</a>
+                        </div>
+                    </td>
+                    <td class="borda-area-botoes">
+                        <div class="conjunto-texto_botao">
+                            <img src="/svg/lixeira.svg" alt="" class="tabela__logo">
+                            <a class="botao__lista-produtos" th:href="@{/produtos/{produtoId}/delete(produtoId = ${produto.id})}">Deletar</a>
+                        </div>
+                    </td>
                 </tr>
             </tbody>
         </table>
     </div>
     <div>
-        <button class="botao-novo__produto" >
-            <a class="botao-novo__produto__texto" href="/produtos/new">Novo Produto</a>
+        <button class="button__novo-produto" >
+            <a class="button__geral" href="/produtos/new">Novo Produto</a>
         </button>
 
     </div>
