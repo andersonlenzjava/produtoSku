@@ -4,18 +4,19 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/css/_reset.css">
     <link rel="stylesheet" href="/css/style_edit_new.css">
+    <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/style_index.css">
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/footer.css">
     <title>Novo Produto</title>
 </head>
 
-<body class="corpo-form">
-<div>
-  <div class="caixa-geral__titulo">
+<body>
+  <header class="caixa-geral__titulo">
     <h1>Novo Produto</h1>
-  </div>
-
-  <div class="formulario-cadastro">
+  </header>
+<section>
+  <div class="corpo-form formulario-cadastro">
     <form th:object="${formProdutoDto}" action="/produtos" method="POST">
       <div class="celula-cadastro">
         <label class="celula-cadastro__label" for="descricao">Descrição do produto</label>
@@ -68,11 +69,9 @@
       </div>
     </form>
   </div>
-</div>
-
+</section>
+<footer class="rodape">
+  <p>&copy; Sistema de Cadastro de Produto - SCP</p>
+</footer>
 </body>
-
-
-
-
 </html>

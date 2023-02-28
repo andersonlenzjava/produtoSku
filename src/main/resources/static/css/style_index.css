@@ -1,16 +1,13 @@
-.caixa-geral {
-    margin: 0 auto;
-    width: 80%;
-}
- 
-.button__novo-produto {
-    margin-top: 2rem;
+.caixa-tabela {
+    margin-right: 10%;
+    margin-left: 10%;
 }
 
-table, th, tr, th, td {
+table, th, tr {
     border: 1px solid;
     border-collapse: collapse;
 }
+/* td */
 
 th, tr, th, td {
 padding: 0.2rem;
@@ -21,7 +18,6 @@ vertical-align: middle;
 th {
     font-weight: 700;
 }
-
 
 .borda-area-botoes, .borda-area-botoes {
     border: none;

@@ -5,32 +5,37 @@
     <link rel="stylesheet" href="/css/_reset.css">
     <link rel="stylesheet" href="/css/style_show.css">
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
     <title>Detalhes do produto</title>
 </head>
-<body class="corpo-show">
-    <h1 class="caixa-geral__titulo">Detalhes do Produto # <span th:text="${produto.id}"></span></h1>
-    <main>
+<body>
+    <header class="caixa-geral__titulo">
+        <h1>Detalhes do Produto: <span th:text="${produto.id}"></span></h1>
+    </header>   
+    <main class="corpo-show">
+        <div class="corpo-show__itens">
+            <p>ID:<span th:text="${produto.getId()}"></span></p>
+            <p>Descrição:<span th:text="${produto.descricao}"></span></p>
+            <p>Marca:<span th:text="${produto.marca}"></span></p>
+            <p>Departamento:<span th:text="${produto.departamento}"></span></p>
+            <p>Nome:<span th:text="${produto.nome}"></span></p>
+            <p>Modelo:<span th:text="${produto.modelo}"></span></p>
+            <p>Tamanho:<span th:text="${produto.tamanho}"></span></p>
+            <p>Url Imagem:<span th:text="${produto.urlImagem}"></span></p>
+            <p>Codigo de Barras:<span th:text="${produto.codigoBarras}"></span></p>
+            <p>Data Lançamento:<span th:text="${produto.dataLancamento}"></span></p>
+        </div>
         <div>
-            <div class="corpo-show__itens">
-                <p>ID:<span th:text="${produto.getId()}"></span></p>
-                <p>Descrição:<span th:text="${produto.descricao}"></span></p>
-                <p>Marca:<span th:text="${produto.marca}"></span></p>
-                <p>Departamento:<span th:text="${produto.departamento}"></span></p>
-                <p>Nome:<span th:text="${produto.nome}"></span></p>
-                <p>Modelo:<span th:text="${produto.modelo}"></span></p>
-                <p>Tamanho:<span th:text="${produto.tamanho}"></span></p>
-                <p>Url Imagem:<span th:text="${produto.urlImagem}"></span></p>
-                <p>Codigo de Barras:<span th:text="${produto.codigoBarras}"></span></p>
-                <p>Data Lançamento:<span th:text="${produto.dataLancamento}"></span></p>
-            </div>
-            <div>
-                <div class="corpo-show__menu">
-<!--                    monta a url do botão editar na view show -->
-                    <a class="button__geral" th:href="@{/produtos/{produtoId}/edit(produtoId = ${produto.id})}">Editar</a>
-                    <a class="button__geral" href="/produtos">Voltar</a>
-                </div>
+            <div class="corpo-show__menu">
+                <a class="button__geral" th:href="@{/produtos/{produtoId}/edit(produtoId = ${produto.id})}">Editar</a>
+                <a class="button__geral" href="/produtos">Voltar</a>
             </div>
         </div>
     </main>
+<footer class="rodape">
+    <p>&copy; Sistema de Cadastro de Produto - SCP</p>
+</footer>
 </body>
 </html>
