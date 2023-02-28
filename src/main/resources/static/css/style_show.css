@@ -8,8 +8,12 @@
 
 .corpo-show__itens > p {
     margin-top: 0.5rem;
+    font-weight: bold;
 }
 
+.corpo-show__itens > p > span {
+    font-weight: 100;
+}
 .corpo-show__menu {
     margin-top: 2rem;
     display: flex;

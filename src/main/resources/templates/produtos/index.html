@@ -24,7 +24,7 @@
                 <th>Nome</th>
                 <th class="limite-width">Modelo</th>
                 <th>Tamanho</th>
-                <th class="limite-width">Url da Imagem</th>
+                <th>Imagem</th>
                 <th>Codigo de Barras</th>
                 <th>Data Lançamento</th>
                 <th class="borda-area-botoes"></th>
@@ -38,26 +38,27 @@
                     <td th:text="${produto.descricao}">Descrição</td>
                     <td th:text="${produto.marca}">Marca</td>
                     <td th:text="${produto.departamento}">Departamento</td>
-                    <td th:text="${produto.nome}">Nome</td>
-                    <td th:text="${produto.modelo}">Modelo</td>
+                    <td class="limite-width" th:text="${produto.nome}">Nome</td>
+                    <td class="limite-width" th:text="${produto.modelo}">Modelo</td>
                     <td th:text="${produto.tamanho}">Tamanho</td>
-                    <td class="limite-width" th:text="${produto.urlImagem}">UrlImagem</td>
+                    <!-- <td class="limite-width" th:text="${produto.urlImagem}">UrlImagem</td> -->
+                    <td class="mini-figura"><img th:src="${produto.urlImagem}" alt=""></td>
                     <td class="limite-width" th:text="${produto.codigoBarras}">Codigo de Barras</td>
                     <td th:text="${produto.dataLancamento}">Data Lançamento</td>
                     <td class="borda-area-botoes">
-                        <div class="conjunto-texto_botao">
+                        <div class="conjunto-texto_botao b_detalhar">
                             <img src="/svg/lupa.svg" alt="" class="tabela__logo">
                             <a class="botao__lista-produtos" th:href="@{/produtos/{produtoId}(produtoId = ${produto.id})}">Detalhes</a>
                         </div>     
                     </td>
                     <td class="borda-area-botoes">
-                        <div class="conjunto-texto_botao">
+                        <div class="conjunto-texto_botao b_editar">
                             <img src="/svg/lapis.svg" alt="" class="tabela__logo">
                             <a class="botao__lista-produtos" th:href="@{/produtos/{produtoId}/edit(produtoId = ${produto.id})}">Editar</a>
                         </div>
                     </td>
                     <td class="borda-area-botoes">
-                        <div class="conjunto-texto_botao">
+                        <div class="conjunto-texto_botao b_excluir">
                             <img src="/svg/lixeira.svg" alt="" class="tabela__logo">
                             <a class="botao__lista-produtos" th:href="@{/produtos/{produtoId}/delete(produtoId = ${produto.id})}">Deletar</a>
                         </div>

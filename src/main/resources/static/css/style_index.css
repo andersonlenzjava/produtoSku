@@ -1,8 +1,6 @@
-/* MAIN  */
-
 .caixa-geral {
     margin: 0 auto;
-    width: 70%;
+    width: 80%;
 }
  
 .button__novo-produto {
@@ -20,12 +18,17 @@ text-align: center;
 vertical-align: middle;
 }
 
+th {
+    font-weight: 700;
+}
+
+
 .borda-area-botoes, .borda-area-botoes {
     border: none;
 } 
 
 .limite-width {
-    max-width: 5rem;
+    max-width: 7rem;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -40,6 +43,19 @@ vertical-align: middle;
     padding: 0.5rem;
 }
 
+.b_detalhar {
+    background-color: green;
+}
+
+.b_editar {
+    background-color: yellow;
+}
+
+.b_excluir {
+    background-color: rgb(251, 107, 50);
+}
+
+
 .botao__lista-produtos {
     /* border: 1px solid black; */
     border-radius: 0.2rem;
@@ -51,4 +67,8 @@ vertical-align: middle;
     width: 1.2rem;
 }
 
+.mini-figura {
+    width: 5rem;
+    height: 5rem;
+}
 
