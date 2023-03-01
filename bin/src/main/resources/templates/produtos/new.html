@@ -1,0 +1,76 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Novo Produto</title>
+</head>
+
+<body class="corpo-form">
+<div>
+  <div>
+    <h1>Novo Produto</h1>
+  </div>
+
+  <div class="formulario-cadastro">
+    <form th:object="${formProdutoDto}" action="/produtos" method="POST">
+      <div class="celula-cadastro">
+        <label class="celula-cadastro__label" for="descricao">Descrição do produto</label>
+        <input class="celula-cadastro__input" type="text" id="descricao" th:field="*{descricao}" />
+        <span th:errorclass="error" th:errors="*{descricao}"></span>
+      </div>
+      <div  class="celula-cadastro">
+        <label class="celula-cadastro__label" for="marca">Marca</label>
+        <input class="celula-cadastro__input" type="text" id="marca" th:field="*{marca}">
+        <span th:errorclass="error" th:errors="*{marca}"></span>
+      </div>
+      <div class="celula-cadastro">
+        <label class="celula-cadastro__label" for="departamento">Departamento</label>
+        <input class="celula-cadastro__input" type="text" id="departamento" th:field="*{departamento}">
+        <span th:errorclass="error" th:errors="*{departamento}"></span>
+      </div>
+      <div class="celula-cadastro">
+        <label class="celula-cadastro__label" for="nome_produto">Nome do Produto</label>
+        <input class="celula-cadastro__input" type="text" id="nome_produto" th:field="*{nome}">
+        <span th:errorclass="error" th:errors="*{nome}"></span>
+      </div>
+      <div class="celula-cadastro">
+        <label class="celula-cadastro__label" for="modelo">Modelo</label>
+        <input class="celula-cadastro__input" type="text" id="modelo" th:field="*{modelo}">
+        <span th:errorclass="error" th:errors="*{modelo}"></span>
+      </div>
+      <div class="celula-cadastro">
+        <label class="celula-cadastro__label" for="tamanho">Tamanho</label>
+        <input class="celula-cadastro__input" type="text" id="tamanho" th:field="*{tamanho}">
+        <span th:errorclass="error" th:errors="*{tamanho}"></span>
+      </div>
+      <div class="celula-cadastro">
+        <label class="celula-cadastro__label" for="url">URL da imagem do Produto</label>
+        <input class="celula-cadastro__input" type="text" id="url" th:field="*{urlImagem}">
+        <span th:errorclass="error" th:errors="*{urlImagem}"></span>
+      </div>
+      <div class="celula-cadastro">
+        <label class="celula-cadastro__label" for="codigo_barras">Código de barras</label>
+        <input class="celula-cadastro__input" type="text" id="codigo_barras" th:field="*{codigoBarras}">
+        <span th:errorclass="error" th:errors="*{codigoBarras}"></span>
+      </div>
+      <div class="celula-cadastro">
+        <label class="celula-cadastro__label" for="data_lancamento">Data de Lançamento</label>
+        <input class="celula-cadastro__input" type="text" id="data_lancamento" th:field="*{dataLancamento}">
+        <span th:errorclass="error" th:errors="*{dataLancamento}"></span>
+      </div>
+      <div class="submit-space">
+        <button type="submit">Submeter</button>
+        <a href="javascript:history.back()">Voltar</a>
+
+      </div>
+    </form>
+  </div>
+</div>
+
+</body>
+
+
+
+
+</html>

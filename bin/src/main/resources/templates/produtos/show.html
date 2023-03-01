@@ -1,0 +1,36 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Detalhes do produto</title>
+</head>
+<body>
+    <h1>Detalhes do Produto</h1>
+    <h2>Produto #<span th:text="${produto.id}"></span></h2>
+    <main>
+        <div>
+            <div>
+                <div>
+                    <b>ID:</b> <span th:text="${produto.getId()}"></span><br/>
+                    <b>Descrição:</b> <span th:text="${produto.descricao}"></span><br/>
+                    <b>Marca:</b> <span th:text="${produto.marca}"></span><br/>
+                    <b>Departamento:</b> <span th:text="${produto.departamento}"></span><br/>
+                    <b>Nome:</b> <span th:text="${produto.nome}"></span><br/>
+                    <b>Modelo:</b> <span th:text="${produto.modelo}"></span><br/>
+                    <b>Tamanho:</b> <span th:text="${produto.tamanho}"></span><br/>
+                    <b>Url Imagem:</b> <span th:text="${produto.urlImagem}"></span><br/>
+                    <b>Codigo de Barras:</b> <span th:text="${produto.codigoBarras}"></span><br/>
+                    <b>Data Lançamento:</b> <span th:text="${produto.dataLancamento}"></span><br/>
+                </div>
+            </div>
+            <div>
+                <div>
+<!--                    monta a url do botão editar na view show -->
+                    <a th:href="@{/produtos/{produtoId}/edit(produtoId = ${produto.id})}">Editar</a><a href="/produtos">Voltar</a>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

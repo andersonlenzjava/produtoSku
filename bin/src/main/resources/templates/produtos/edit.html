@@ -1,0 +1,76 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Editar Produto</title>
+</head>
+
+<body>
+<div>
+  <div>
+<!--    passado no model and view -->
+    <h1>Editar Produto #: <span th:text="${produtoId}"></span></h1>
+  </div>
+
+  <div>
+    <div>
+      <form th:object="${formProdutoDto}" th:action="@{/produtos/{produtoId}(produtoId = ${produtoId})}" method="POST">
+        <div>
+          <label>Descrição do produto</label>
+          <input type="text" th:field="*{descricao}">
+          <div th:errors="*{descricao}"> </div>
+        </div>
+        <div>
+          <label>Marca</label>
+          <input type="text" th:field="*{marca}">
+          <div th:errors="*{marca}"> </div>
+        </div>
+        <div>
+          <label>Departamento</label>
+          <input type="text" th:field="*{departamento}">
+          <div th:errors="*{departamento}"> </div>
+        </div>
+        <div>
+          <label>Nome do Produto</label>
+          <input type="text" th:field="*{nome}">
+          <div th:errors="*{nome}"> </div>
+        </div>
+        <div>
+          <label>Modelo</label>
+          <input type="text" th:field="*{modelo}">
+          <div th:errors="*{modelo}"> </div>
+        </div>
+        <div>
+          <label>Tamanho</label>
+          <input type="text" th:field="*{tamanho}">
+          <div th:errors="*{tamanho}"> </div>
+        </div>
+        <div>
+          <label>URL da imagem do Produto</label>
+          <input type="text" th:field="*{urlImagem}">
+          <div th:errors="*{urlImagem}"> </div>
+        </div>
+        <div>
+          <label>Código de barras</label>
+          <input type="text" th:field="*{codigoBarras}">
+          <div th:errors="*{codigoBarras}"> </div>
+        </div>
+        <div>
+          <label>Data de Lançamento</label>
+          <input type="text" th:field="*{dataLancamento}">
+          <div th:errors="*{dataLancamento}"> </div>
+        </div>
+        <button type="submit">Submeter</button>
+        <a href="javascript:history.back()">Voltar</a>
+      </form>
+    </div>
+  </div>
+</div>
+
+</body>
+
+
+
+
+</html>

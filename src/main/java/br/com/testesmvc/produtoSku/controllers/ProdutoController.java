@@ -138,7 +138,6 @@ public class ProdutoController {
 
     @GetMapping("/{id}/delete")
     public String delete(@PathVariable Long id) {
-        // tratamento do erro para evitar que o usuario saiba que fez algo errado
         try {
             this.produtoRepository.deleteById(id);
         }
