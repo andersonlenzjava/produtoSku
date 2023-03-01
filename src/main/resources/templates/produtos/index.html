@@ -2,15 +2,20 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/_reset.css">
+    <link rel="stylesheet" href="/css/style_index.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
     <link rel="stylesheet" href="/css/style.css">
     <title>Lista de Produtos</title>
 </head>
-
 <body class="caixa-geral">
-    <div>
+    <header class="caixa-geral__titulo">
         <h1>Lista de Produtos</h1>
-        <span class="sucess-menssage">mensagem de aviso!</span>
-    </div>
+        <button class="button__novo-produto">
+            <a class="button__geral" href="/produtos/new">Novo Produto</a>
+        </button>
+    </header>
     <div class="caixa-tabela">
         <table>
             <thead>
@@ -22,12 +27,12 @@
                 <th>Nome</th>
                 <th class="limite-width">Modelo</th>
                 <th>Tamanho</th>
-                <th class="limite-width">Url da Imagem</th>
+                <th>Imagem</th>
                 <th>Codigo de Barras</th>
                 <th>Data Lançamento</th>
-                <th></th>
-                <th></th>
-                <th></th>
+                <th class="borda-area-botoes"></th>
+                <th class="borda-area-botoes"></th>
+                <th class="borda-area-botoes"></th>
             </tr>
             </thead>
             <tbody>
@@ -36,22 +41,37 @@
                     <td th:text="${produto.descricao}">Descrição</td>
                     <td th:text="${produto.marca}">Marca</td>
                     <td th:text="${produto.departamento}">Departamento</td>
-                    <td th:text="${produto.nome}">Nome</td>
+                    <td class="limite-width" th:text="${produto.nome}">Nome</td>
                     <td class="limite-width" th:text="${produto.modelo}">Modelo</td>
                     <td th:text="${produto.tamanho}">Tamanho</td>
-                    <td class="limite-width" th:text="${produto.urlImagem}">UrlImagem</td>
-                    <td th:text="${produto.codigoBarras}">Codigo de Barras</td>
+                    <!-- <td class="limite-width" th:text="${produto.urlImagem}">UrlImagem</td> -->
+                    <td class="mini-figura"><img th:src="${produto.urlImagem}" alt=""></td>
+                    <td class="limite-width" th:text="${produto.codigoBarras}">Codigo de Barras</td>
                     <td th:text="${produto.dataLancamento}">Data Lançamento</td>
-                    <td><a th:href="@{/produtos/{produtoId}(produtoId = ${produto.id})}">Detalhes</a></td>
-                    <td><a th:href="@{/produtos/{produtoId}/edit(produtoId = ${produto.id})}">Editar</a></td>
-                    <td><a th:href="@{/produtos/{produtoId}/delete(produtoId = ${produto.id})}">Deletar</a></td>
+                    <td class="borda-area-botoes">
+                        <div class="conjunto-texto_botao b_detalhar">
+                            <img src="/svg/lupa.svg" alt="" class="tabela__logo">
+                            <a class="botao__lista-produtos" th:href="@{/produtos/{produtoId}(produtoId = ${produto.id})}">Detalhes</a>
+                        </div>     
+                    </td>
+                    <td class="borda-area-botoes">
+                        <div class="conjunto-texto_botao b_editar">
+                            <img src="/svg/lapis.svg" alt="" class="tabela__logo">
+                            <a class="botao__lista-produtos" th:href="@{/produtos/{produtoId}/edit(produtoId = ${produto.id})}">Editar</a>
+                        </div>
+                    </td>
+                    <td class="borda-area-botoes">
+                        <div class="conjunto-texto_botao b_excluir">
+                            <img src="/svg/lixeira.svg" alt="" class="tabela__logo">
+                            <a class="botao__lista-produtos" th:href="@{/produtos/{produtoId}/delete(produtoId = ${produto.id})}">Deletar</a>
+                        </div>
+                    </td>
                 </tr>
             </tbody>
         </table>
     </div>
-    <div>
-        <a href="/produtos/new">Novo Produto</a>
-    </div>
-
+    <footer class="rodape">
+        <p>&copy; Sistema de Cadastro de Produto - SCP</p>
+    </footer>
 </body>
 </html>

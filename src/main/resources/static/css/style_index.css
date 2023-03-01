@@ -1,0 +1,70 @@
+.caixa-tabela {
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+table, th, tr {
+    border: 1px solid;
+    border-collapse: collapse;
+}
+/* td */
+
+th, tr, th, td {
+padding: 0.2rem;
+text-align: center;
+vertical-align: middle;
+}
+
+th {
+    font-weight: 700;
+}
+
+.borda-area-botoes, .borda-area-botoes {
+    border: none;
+} 
+
+.limite-width {
+    max-width: 7rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.conjunto-texto_botao {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 0.2rem;
+    padding: 0.5rem;
+}
+
+.b_detalhar {
+    background-color: green;
+}
+
+.b_editar {
+    background-color: yellow;
+}
+
+.b_excluir {
+    background-color: rgb(251, 107, 50);
+}
+
+
+.botao__lista-produtos {
+    /* border: 1px solid black; */
+    border-radius: 0.2rem;
+    padding: 0.2rem;
+}
+
+.tabela__logo {
+    height: 1.2rem;
+    width: 1.2rem;
+}
+
+.mini-figura {
+    width: 5rem;
+    height: 5rem;
+}
+

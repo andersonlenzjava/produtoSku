@@ -1,0 +1,23 @@
+.caixa-geral__titulo {
+    height: 5rem;
+    text-align: center;
+    color: blue;
+    font-weight: 700;
+    font-size: 2rem;
+    background-color: aquamarine;
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.caixa-geral__titulo > h1 {
+    align-self: center;
+}
+
+.error-menssage {
+    color: #dc3545;
+}
+
+.sucess-menssage {
+    color: #198754;
+}

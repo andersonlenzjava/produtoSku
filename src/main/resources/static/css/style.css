@@ -1,28 +1,36 @@
-.error-menssage {
-    color: #dc3545;
+body {
+    font-family: sans-serif;
 }
 
-.sucess-menssage {
-    color: #198754;
+.button__geral {
+    text-decoration: none;
+    font-size: 1.2rem;
+    border: 1px solid black;
+    border-radius: 2px;
+    padding: 0.8rem;
+    vertical-align: auto;
 }
 
-table, th, tr, th, td {
-    border: 1px solid;
-    border-collapse: collapse;
-
+.button__geral:hover {
+    background-color: cadetblue;
+    transition: 1s;
+    cursor: pointer;
 }
 
-th, tr, th, td {
-padding: 5px;
+.button__geral:active {
+    background-color: rgb(64, 122, 124);
+    cursor: default;
 }
 
-.caixa-geral {
-    max-width: 1200px;
-}
 
-.limite-width {
-    max-width: 120px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
+
+
+
+
+
+
+
+
+
+
+
