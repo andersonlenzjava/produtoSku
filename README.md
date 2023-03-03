@@ -8,10 +8,9 @@ Com a construção de algumas views feitas com o auxilio do Spring MVC.
 ## 📃 Requisitos apresentados pelo cliente
 
 Com o apoio do Spring MVC, realize uma implementação para realizar a persistência de um
-&quot;produto&quot;. Obs.: Não há necessidade de realizar a persistência dos seus objetos
-relacionados, neste momento o objetivo será apenas compreender sua habilidade em
-realizar o setup do projeto e implementação das classes e interfaces mínimas para tal
-operação.
+&quot;produto&quot; O Objetivo é compreender sua habilidade em
+realizar o setup do projeto e implementação das classes e interfaces para tal
+operação, com a persistência de dados, e portabilidade das informações cadastradas junto com o projeto.
 
 ## ⚙️ Funcionalidades Estabelecidas
 
@@ -55,7 +54,7 @@ As seguintes tecnologias foram utilizadas no desenvolvimento da API MVC do proje
      - Download do projeto e descompactar </br>
      - Fazer a atualização das dependências com o Maven em sua IDE</br>
      - Fazer a configuração do banco de dados de sua preferência</br>
-     - Criar o scema no banco de dados </br>
+     - Criar o schema no banco de dados </br>
      - Configurar a API para este banco de dados</br>
      - Rodar o projeto com a app.properties em spring.jpa.hibernate.ddl-auto=create</br>
      - Em seguida colocar spring.jpa.hibernate.ddl-auto=none</br>
@@ -66,7 +65,10 @@ Acessar local http://localhost:8080/produtos que leva a página inicial.
 Em seguida cadastrar alguns novos produtos clicando no link Novo Produto.
 
 Depois de cadastrado o sistema redireciona para a view Detalhes, mostrando
-os detalhes do produto recém cadastrado. 
+os detalhes do produto recém cadastrado, com opções de:
+ - Detalhar os seus dados.
+ - Editar os seus dados.
+ - Deletar um produto. 
 
 Clicando no botão voltar o sistema acessa a view index, onde é mostrada a lista 
 de produtos com o novo produto incluso. 
