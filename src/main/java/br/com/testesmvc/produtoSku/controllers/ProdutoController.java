@@ -58,7 +58,7 @@ public class ProdutoController {
             Produto produto = formProdutoDto.toProduto();
             this.produtoRepository.save(produto);
 
-//          após criar os professores chava o seu detalhamento através da string montada abaixo
+//          após criar os professores chama o seu detalhamento através da string montada abaixo
             return new ModelAndView("redirect:/produtos/" + produto.getId());
         }
 

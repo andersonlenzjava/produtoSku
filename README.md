@@ -8,9 +8,9 @@ Com a construção de algumas views feitas com o auxilio do Spring MVC.
 ## 📃 Requisitos apresentados pelo cliente
 
 Com o apoio do Spring MVC, realize uma implementação para realizar a persistência de um
-&quot;produto&quot; O Objetivo é compreender sua habilidade em
-realizar o setup do projeto e implementação das classes e interfaces para tal
-operação, com a persistência de dados, e portabilidade das informações cadastradas junto com o projeto.
+&quot;produto&quot; O Objetivo é mensurar sua habilidade em
+realizar o setup do projeto e implementação das classes e interfaces para esta
+operação, com a persistência de dados, e portabilidade das informações persistidas junto com o projeto.
 
 ## ⚙️ Funcionalidades Estabelecidas
 
