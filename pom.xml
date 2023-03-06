@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>br.com.maker</groupId>
-	<artifactId>produtoSku</artifactId>
+	<artifactId>produtoCrud</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>produtoSku</name>
 	<description>br.com.maker.produtoSku</description>
