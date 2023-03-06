@@ -71,3 +71,6 @@ os detalhes do produto recém cadastrado, com opções de:
 
 Clicando no botão voltar o sistema acessa a view index, onde é mostrada a lista 
 de produtos com o novo produto incluso. 
+
+Video do projeto:
+https://youtu.be/_hqRcSkaVkA
