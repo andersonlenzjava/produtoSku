@@ -8,7 +8,7 @@ Com a construção de algumas views feitas com o auxilio do Spring MVC.
 ## 📃 Requisitos apresentados pelo cliente
 
 Com o apoio do Spring MVC, realize uma implementação para realizar a persistência de um
-&quot;produto&quot; Implementando as classes e interfaces para esta
+"produto" Implementando as classes e interfaces para esta
 operação, com a persistência de dados, e portabilidade das informações persistidas junto com o projeto.
 
 ## ⚙️ Funcionalidades Estabelecidas
@@ -50,13 +50,12 @@ As seguintes tecnologias foram utilizadas no desenvolvimento da API MVC do proje
 
  <p>Neste momento para utilizar o sistema é necessário rodar o sistema offline dentro de alguma IDE, através do Spring Boot.</p>
    <p><strong>Etapas:</strong></p>
-     - Download do projeto e descompactar </br>
+     - Download do projeto e descompactar</br>
+     - Abrir o projeto em uma IDE com suporte para linguagem JAVA</br>
      - Fazer a atualização das dependências com o Maven em sua IDE</br>
-     - Fazer a configuração do banco de dados de sua preferência</br>
-     - Criar o schema no banco de dados </br>
-     - Configurar a API para este banco de dados</br>
-     - Rodar o projeto com a app.properties em spring.jpa.hibernate.ddl-auto=create</br>
-     - Em seguida colocar spring.jpa.hibernate.ddl-auto=none</br>
+     - Abrir o docker</br>
+     - Rodar com a pasta database-docker selecionada no terminal: docker-compose up -d </br>
+     - Ativar a classe main da aplicação</br>
 
 #### Na operacionalização do sistema:
 
